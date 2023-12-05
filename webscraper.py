@@ -12,7 +12,6 @@ def scrape_quotes():
     if response.status_code == 200:
         # Parse the HTML content of the page
         soup = BeautifulSoup(response.text, 'html.parser')
-        print(soup)
         # Extract information from the HTML
         quotes = []
         for quote in soup.find_all('span', class_='text'):
